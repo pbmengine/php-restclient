@@ -1,0 +1,43 @@
+{
+    "name": "pbmengine/php-restclient",
+    "description": "Generic PHP client to access REST APIs",
+    "keywords": [
+        "pbm", "pbmengine", "php-restclient"
+    ],
+    "homepage": "https://github.com/pbmengine/php-restclient",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stefan Riehl",
+            "email": "stefan@personal-business-machine.com",
+            "homepage": "https://personal-business-machine.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "guzzlehttp/guzzle": "^6.3",
+        "illuminate/support": "5.7.*|5.8.*",
+        "mockery/mockery": "^1.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pbmengine\\Restclient\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pbmengine\\Restclient\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
