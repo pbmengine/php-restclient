@@ -175,4 +175,17 @@ class HttpResponse
     {
         return collect(json_decode($json, 1));
     }
+
+    /**
+     * get magically key from content
+     *
+     * @param $key
+     * @return null
+     */
+    public function __get($key)
+    {
+        $data = $this->content();
+
+        return $data->{$key} ?? null;
+    }
 }
