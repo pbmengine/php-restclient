@@ -5,15 +5,10 @@ namespace Pbmengine\Restclient\Tests;
 use Pbmengine\Restclient\HttpClient;
 use Pbmengine\Restclient\HttpResponse;
 use PHPUnit\Framework\TestCase;
-use \Mockery;
+use Mockery;
 
 class RestClientTest extends TestCase
 {
-    public function tearDown()
-    {
-        Mockery::close();
-    }
-
     public function test_adding_headers()
     {
         $client = new HttpClient($http = Mockery::mock('GuzzleHttp\Client'));
