@@ -224,7 +224,6 @@ class HttpClient
     {
         $this->body = null;
         $this->body(['multipart' => $payload]);
-        $this->header('Content-Type', 'multipart/form-data');
 
         return $this;
     }
@@ -241,7 +240,6 @@ class HttpClient
     {
         $this->body = null;
         $this->body(['form_params' => $payload]);
-        $this->header('Content-Type', 'application/x-www-form-urlencoded');
 
         return $this;
     }
