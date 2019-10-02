@@ -132,7 +132,7 @@ class HttpResponse
      */
     public function content()
     {
-        return json_decode($this->rawContent());
+        return json_decode($this->rawContent);
     }
 
     /**
