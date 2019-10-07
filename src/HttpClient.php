@@ -389,7 +389,7 @@ class HttpClient
      */
     public function reset()
     {
-        return new self();
+        return new self(null, $this->baseUrl, $this->options);
     }
 
     /**
@@ -399,6 +399,8 @@ class HttpClient
     {
         $this->body = [];
         $this->queryParams = [];
+        unset($this->headers['Content-Type']);
+        unset($this->headers['Accept']);
     }
 
     /**
